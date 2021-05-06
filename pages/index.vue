@@ -2,7 +2,11 @@
   <div class="container">
 
     <!-- Image grid Start -->
-    <main></main>
+    <main class="z-0" >
+      <article>
+        <h1>Hello</h1>
+      </article>
+    </main>
     <!-- Image grid End  -->
 
   </div>
