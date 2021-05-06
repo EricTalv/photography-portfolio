@@ -52,11 +52,6 @@
       }
     },
 
-    methods: {
-      alertMe: () => {
-        alert('Hello!')
-      }
-    }
 
 
   }
