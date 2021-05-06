@@ -1,5 +1,5 @@
 <template>
-  <nav class="z-10 relative flex flex-wrap items-center justify-between bg-white">
+  <nav class=" flex flex-wrap items-center justify-between bg-white">
 
     <!-- logo Start -->
     <div class="nav-logo">
@@ -23,16 +23,19 @@
       class=
         "
         nav-links
-        relative
-        z-10
-        w-full
+        h-5/6
+        absolute
+        top-24
+        bg-white
         flex
         flex-col
+        content-center
         items-center
-        text-5xl
+        text-3xl
         md:pr-20
         "
       :class="isActive ? 'block' : 'hidden' "
+      style="width: 92%"
 
     >
       <a href="#"
