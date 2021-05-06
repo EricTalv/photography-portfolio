@@ -9,7 +9,11 @@
     <!-- logo End -->
 
     <!-- links Start -->
-    <div class="nav-links hidden pr-20 md:block">
+    <div
+      class="nav-links  pr-20 md:block"
+      :class="isActive ? 'block' : 'hidden' "
+
+    >
       <a href="#"
          class="">Work</a>
       <a href="#"
@@ -29,7 +33,7 @@
     </div>
     <!-- hamburger End -->
 
-    <!-- social -->
+    <!-- social Start -->
     <a href="#" class="hidden md:flex">
       <svg class="h-8 w-8 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
            stroke-linecap="round" stroke-linejoin="round">
@@ -38,6 +42,8 @@
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
       </svg>
     </a>
+    <!-- social End -->
+
   </nav>
 </template>
 
