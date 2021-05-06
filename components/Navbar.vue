@@ -36,21 +36,32 @@
       :class="isActive ? 'block' : 'hidden' "
 
     >
-      <a href="#"
-         class="block md:inline-block">Work</a>
-      <a href="#"
-         class="block md:inline-block">About</a>
-      <a href="#"
-         class="block md:inline-block">Contact</a>
 
-      <a href="#" class=" md:hidden">
-        <svg class="h-8 w-8 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-        </svg>
-      </a>
+
+      <div class="
+        nav-links-a
+        flex-grow
+        flex
+        flex-col
+        items-center">
+        <a href="#"
+           class="block md:inline-block">Work</a>
+        <a href="#"
+           class="block md:inline-block">About</a>
+        <a href="#"
+           class="block md:inline-block">Contact</a>
+      </div>
+
+
+        <a href="#" class="mb-10 md:hidden">
+          <svg class="h-8 w-8 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+
     </div>
     <!-- links End -->
 
@@ -101,7 +112,13 @@
     font-family: 'Source Code Pro', monospace;
     font-weight: 300;
     width: 92%;
-    font-size: 6.6vmin;
+    font-size: 8.5vmin;
+
+    .nav-links-a {
+      a {
+        margin: 5vw 5vw 0 5vw ;
+      }
+    }
   }
 
 
