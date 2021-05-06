@@ -29,13 +29,11 @@
         bg-white
         flex
         flex-col
-        content-center
+        justify-center
         items-center
-        text-3xl
         md:pr-20
         "
       :class="isActive ? 'block' : 'hidden' "
-      style="width: 92%"
 
     >
       <a href="#"
@@ -102,6 +100,8 @@
   .nav-links {
     font-family: 'Source Code Pro', monospace;
     font-weight: 300;
+    width: 92%;
+    font-size: 6.6vmin;
   }
 
 
