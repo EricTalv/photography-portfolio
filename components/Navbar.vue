@@ -1,5 +1,5 @@
 <template>
-  <nav class=" flex flex-wrap items-center justify-between bg-white">
+  <nav class="mb-10 flex flex-wrap items-center justify-between bg-white">
 
     <!-- logo Start -->
     <div class="nav-logo">
@@ -132,12 +132,15 @@
 
   .nav-links-mobile-is-active {
     opacity: 1;
-    transition: opacity .5s;
+    visibility: visible;
+    transition: all .5s;
+
   }
 
   .nav-links-mobile-disable {
     opacity: 0;
-    transition: opacity .5s;
+    visibility: hidden;
+    transition: all .5s;
   }
 
   a.nuxt-link-exact-active {
