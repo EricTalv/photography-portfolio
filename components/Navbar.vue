@@ -140,5 +140,13 @@
     transition: opacity .5s;
   }
 
+  a.nuxt-link-exact-active {
+    font-weight: 400;
+
+    border-bottom: 1px solid black;
+    padding-bottom: 3px;
+  }
+
+
 
 </style>
