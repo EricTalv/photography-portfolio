@@ -31,9 +31,10 @@
         flex-col
         justify-center
         items-center
+        transition-all
         md:pr-20
         "
-      :class="isActive ? 'block' : 'hidden' "
+      :class="isActive ? 'nav-links-is-active' : 'nav-links-disable' "
 
     >
 
@@ -114,11 +115,24 @@
     width: 92%;
     font-size: 8.5vmin;
 
+
+
+
     .nav-links-a {
       a {
         margin: 5vw 5vw 0 5vw ;
       }
     }
+  }
+
+  .nav-links-is-active {
+    opacity: 1;
+    transition: opacity .5s;
+  }
+
+  .nav-links-disable {
+    opacity: 0;
+    transition: opacity .5s;
   }
 
 
