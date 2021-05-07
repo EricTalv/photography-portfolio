@@ -18,11 +18,20 @@
     </div>
     <!-- hamburger End -->
 
-    <!-- links Start -->
+
+    <!-- links desktop Start  -->
+    <div class="nav-links-desktop hidden md:block pr-20">
+      <NuxtLink to="/">Work</NuxtLink>
+      <NuxtLink to="/about">About</NuxtLink>
+      <NuxtLink to="/contact">Contact</NuxtLink>
+    </div>
+    <!-- links desktop End  -->
+
+    <!-- links Mobile Start -->
     <div
       class=
         "
-        nav-links
+        nav-links-mobile
         h-5/6
         absolute
         top-24
@@ -31,19 +40,15 @@
         flex-col
         justify-center
         items-center
-        transition-all
-        md:pr-20
         "
-      :class="isActive ? 'nav-links-is-active' : 'nav-links-disable' "
-
-    >
-
+      :class="isActive ? 'nav-links-mobile-is-active' : 'nav-links-mobile-disable' ">
 
       <div class="
-        nav-links-a
-        flex-grow
+        nav-links-mobile-a
+        h-full
         flex
         flex-col
+        justify-center
         items-center">
         <a href="#"
            class="block md:inline-block">Work</a>
@@ -54,17 +59,17 @@
       </div>
 
 
-        <a href="#" class="mb-10 md:hidden">
-          <svg class="h-8 w-8 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-               stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-        </a>
+      <a href="#" class="mb-10 md:hidden">
+        <svg class="h-8 w-8 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
 
     </div>
-    <!-- links End -->
+    <!-- links Mobile End -->
 
 
     <!-- social Start -->
@@ -109,28 +114,28 @@
     font-size: 1.8rem;
   }
 
-  .nav-links {
-    font-family: 'Source Code Pro', monospace;
+  .nav-links-mobile, .nav-links-desktop {
     font-weight: 300;
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  .nav-links-mobile {
     width: 92%;
     font-size: 8.5vmin;
 
-
-
-
-    .nav-links-a {
+    .nav-links-mobile-a {
       a {
-        margin: 5vw 5vw 0 5vw ;
+        margin: 5vw 5vw 0 5vw;
       }
     }
   }
 
-  .nav-links-is-active {
+  .nav-links-mobile-is-active {
     opacity: 1;
     transition: opacity .5s;
   }
 
-  .nav-links-disable {
+  .nav-links-mobile-disable {
     opacity: 0;
     transition: opacity .5s;
   }
