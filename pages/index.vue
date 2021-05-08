@@ -60,35 +60,44 @@
     h-full
     max-h-96
     object-cover
+
     }
 
   .work-figure-row {
     @apply flex
+    flex-col
     w-full
-    mb-3
+
+    md:flex-row
+    md:mb-3
     }
 
   .work-figure-first {
-    @apply
-      flex-auto
-      mr-3
+    @apply flex-auto
+    md:mr-3
     }
 
-  $figure-odd: 50%;
-  $figure-even: 33.333333%;
+  .work-figure {
+    @apply
+      mb-3
+      md:mb-0
+  }
+
 
   .work-figure-row {
+
+
     &:nth-child(odd) {
       .work-figure {
         &:nth-child(odd) {
           @apply
-            w-3/4
+          md:w-3/4
 
-        }
+          }
+
         &:nth-child(even) {
-          @apply
-           w-2/3
-        }
+          @apply md:w-2/3
+          }
       }
     }
 
@@ -96,14 +105,12 @@
       .work-figure {
         &:nth-child(even) {
 
-          @apply
-           w-3/4
-        }
+          @apply md:w-3/4
+          }
 
         &:nth-child(odd) {
-          @apply
-            w-2/3
-        }
+          @apply md:w-2/3
+          }
       }
     }
   }
