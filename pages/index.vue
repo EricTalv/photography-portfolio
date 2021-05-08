@@ -4,8 +4,20 @@
 
 
     <!--  Img Modal Test  -->
+
+
     <button id="show-modal" @click="setModalState(true)">Show Modal</button>
-      <img-modal v-if="showModal" @close="setModalState(false)">
+
+
+    <!--  After every 2 items create a ROW   -->
+    <div class="work-figure-row" v-for="i in Math.ceil(images.length / 2)">
+      <figure class="work-figure" v-for="image in images.slice((i - 1) * 2, i * 2)">
+        <img @click="setModalState(true, image.src)" class="work-img" :src="image.src" alt="">
+      </figure>
+    </div>
+
+
+      <img-modal v-if="showModal" @close="setModalState(false)" :currentImage="currentModalImage" :images="images"  >
 
       </img-modal>
 
@@ -50,22 +62,37 @@
 
     data() {
       return {
-        showModal: false
+        showModal: false,
+        currentModalImage: null,
+        images: [
+          {
+            src: "https://picsum.photos/seed/picsum/200/300"
+          },
+          {
+            src: "https://picsum.photos/450/840"
+          },
+          {
+            src: "https://picsum.photos/450/840"
+          },
+          {
+            src: "https://picsum.photos/450/840"
+          }
+        ]
       }
     },
 
     methods: {
 
       // Set Scroll To Disable when modal is open
-      setModalState(state) {
+      setModalState(state,imageSrc) {
         if (state) {
           this.showModal = true;
+          this.currentModalImage = imageSrc;
           document.body.classList.add("modal-open");
-          console.log('set true')
         } else {
           this.showModal = false;
+          this.currentModalImage = null;
           document.body.classList.remove("modal-open");
-          console.log('set false')
 
         }
       }
@@ -103,10 +130,6 @@
     md:mb-3
     }
 
-  .work-figure-first {
-    @apply flex-auto
-    md:mr-3
-    }
 
   .work-figure {
     @apply mb-3
@@ -120,6 +143,8 @@
       .work-figure {
         &:nth-child(odd) {
           @apply md:w-3/4
+            flex-auto
+            md:mr-3
 
           }
 
@@ -138,6 +163,8 @@
 
         &:nth-child(odd) {
           @apply md:w-2/3
+          flex-auto
+          md:mr-3
           }
       }
     }

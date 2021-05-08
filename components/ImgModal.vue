@@ -39,7 +39,7 @@
 
           <div class="modal-body">
             <div class="flex justify-center" >
-              <img class="w-11/12" src="https://picsum.photos/1500/1000" alt="">
+              <img class="w-11/12" :src="currentImage" alt="">
             </div>
 
             <slot name="body">
@@ -61,6 +61,7 @@
 <script>
   export default {
     name: "Modal.vue",
+    props: ['currentImage', 'images']
 
   }
 </script>
