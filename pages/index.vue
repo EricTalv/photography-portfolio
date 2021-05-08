@@ -1,37 +1,111 @@
 <template>
 
   <!-- Work Content / Image grid Start -->
-  <main class="work-container flex flex-wrap space-x-1 space-y-1">
-    <figure class="work-figure">
-      <img class="work-img w-1/2 h-96 flex-auto " src="https://picsum.photos/700/400" alt="">
-    </figure>
-    <figure class="work-figure">
-      <img class="work-img w-1/3 h-96 flex-auto " src="https://picsum.photos/550/640" alt="">
-    </figure>
+  <main class="work-container">
+    <div class="work-figure-row">
+      <figure class="work-figure work-figure-first ">
+        <img class="work-img" src="https://picsum.photos/700/400" alt="">
+      </figure>
+      <figure class="work-figure  ">
+        <img class="work-img" src="https://picsum.photos/550/640" alt="">
+      </figure>
+    </div>
+    <div class="work-figure-row">
+      <figure class="work-figure work-figure-first">
+        <img class="work-img" src="https://picsum.photos/350/400" alt="">
+      </figure>
+      <figure class="work-figure  ">
+        <img class="work-img" src="https://picsum.photos/450/740" alt="">
+      </figure>
+    </div>
+    <div class="work-figure-row">
+      <figure class="work-figure work-figure-first ">
+        <img class="work-img" src="https://picsum.photos/500/400" alt="">
+      </figure>
+      <figure class="work-figure ">
+        <img class="work-img" src="https://picsum.photos/450/840" alt="">
+      </figure>
+    </div>
   </main>
-   <!-- Work Content / Image grid End  -->
+  <!-- Work Content / Image grid End  -->
 
 
 </template>
 
 <script>
-export default {
+  export default {
 
-  data() {
-    return {
-
+    data() {
+      return {}
     }
+
+
   }
-
-
-}
 </script>
 
 <style lang="scss">
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
+  /* Sample `apply` at-rules with Tailwind CSS
+  .container {
+  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+  }
+  */
+
+  .work-container {
+    @apply flex
+    flex-wrap
+    }
+
+  .work-img {
+    @apply w-full
+    h-full
+    max-h-96
+    object-cover
+    }
+
+  .work-figure-row {
+    @apply flex
+    w-full
+    mb-3
+    }
+
+  .work-figure-first {
+    @apply
+      flex-auto
+      mr-3
+    }
+
+  $figure-odd: 50%;
+  $figure-even: 33.333333%;
+
+  .work-figure-row {
+    &:nth-child(odd) {
+      .work-figure {
+        &:nth-child(odd) {
+          @apply
+            w-3/4
+
+        }
+        &:nth-child(even) {
+          @apply
+           w-2/3
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .work-figure {
+        &:nth-child(even) {
+
+          @apply
+           w-3/4
+        }
+
+        &:nth-child(odd) {
+          @apply
+            w-2/3
+        }
+      }
+    }
+  }
 
 </style>
