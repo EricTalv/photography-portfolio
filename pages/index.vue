@@ -6,7 +6,7 @@
     <!--  Img Modal Test  -->
     <button id="show-modal" @click="setModalState(true)">Show Modal</button>
       <img-modal v-if="showModal" @close="setModalState(false)">
-        <h3 slot="body">hello</h3>
+
       </img-modal>
 
     <style>
@@ -61,9 +61,12 @@
         if (state) {
           this.showModal = true;
           document.body.classList.add("modal-open");
+          console.log('set true')
         } else {
           this.showModal = false;
           document.body.classList.remove("modal-open");
+          console.log('set false')
+
         }
       }
     }
