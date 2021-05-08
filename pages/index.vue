@@ -4,14 +4,9 @@
 
 
     <!--  Img Modal Test  -->
-    <button id="show-modal" @click="showModal = true">Show Modal</button>
-    <!-- use the modal component, pass in the prop -->
-      <img-modal v-if="showModal" @close="showModal = false">
-        <!--
-      you can use custom content here to overwrite
-      default content
-    -->
-        <h3 slot="header">{{ showModal }}</h3>
+    <button id="show-modal" @click="setModalState(true)">Show Modal</button>
+      <img-modal v-if="showModal" @close="setModalState(false)">
+        <h3 slot="body">hello</h3>
       </img-modal>
 
     <style>
@@ -58,6 +53,20 @@
         showModal: false
       }
     },
+
+    methods: {
+
+      // Set Scroll To Disable when modal is open
+      setModalState(state) {
+        if (state) {
+          this.showModal = true;
+          document.body.classList.add("modal-open");
+        } else {
+          this.showModal = false;
+          document.body.classList.remove("modal-open");
+        }
+      }
+    }
 
 
   }

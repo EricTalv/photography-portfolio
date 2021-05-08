@@ -2,27 +2,28 @@
 
     <transition name="modal">
       <div class="modal-mask">
+
+        <button class="modal-default-button " @click="$emit('close')">
+          <svg class="h-8 w-8 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
+        </button>
+
         <div class="modal-wrapper">
+
           <div class="modal-container">
 
             <div class="modal-header">
               <slot name="header">
-                default header
               </slot>
             </div>
 
             <div class="modal-body">
               <slot name="body">
-                default body
               </slot>
             </div>
 
             <div class="modal-footer">
               <slot name="footer">
-                default footer
-                <button class="modal-default-button" @click="$emit('close')">
-                  OK
-                </button>
+
               </slot>
             </div>
           </div>
@@ -47,9 +48,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, .9);
     display: table;
     transition: opacity 0.3s ease;
+
   }
 
   .modal-wrapper {
@@ -78,7 +80,10 @@
   }
 
   .modal-default-button {
-    float: right;
+    @apply
+      absolute
+      right-6
+      top-6
   }
 
   /*
@@ -102,6 +107,10 @@
   .modal-leave-active .modal-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  }
+
+  .modal-open {
+    overflow: hidden;
   }
 
 
