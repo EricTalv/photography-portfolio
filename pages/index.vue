@@ -1,34 +1,52 @@
 <template>
 
-  <!-- Work Content / Image grid Start -->
-  <main class="work-container">
-    <div class="work-figure-row">
-      <figure class="work-figure work-figure-first ">
-        <img class="work-img" src="https://picsum.photos/700/400" alt="">
-      </figure>
-      <figure class="work-figure  ">
-        <img class="work-img" src="https://picsum.photos/550/640" alt="">
-      </figure>
-    </div>
-    <div class="work-figure-row">
-      <figure class="work-figure work-figure-first">
-        <img class="work-img" src="https://picsum.photos/350/400" alt="">
-      </figure>
-      <figure class="work-figure  ">
-        <img class="work-img" src="https://picsum.photos/450/740" alt="">
-      </figure>
-    </div>
-    <div class="work-figure-row">
-      <figure class="work-figure work-figure-first ">
-        <img class="work-img" src="https://picsum.photos/500/400" alt="">
-      </figure>
-      <figure class="work-figure ">
-        <img class="work-img" src="https://picsum.photos/450/840" alt="">
-      </figure>
-    </div>
-  </main>
-  <!-- Work Content / Image grid End  -->
+  <div>
 
+
+    <!--  Img Modal Test  -->
+    <button id="show-modal" @click="showModal = true">Show Modal</button>
+    <!-- use the modal component, pass in the prop -->
+      <img-modal v-if="showModal" @close="showModal = false">
+        <!--
+      you can use custom content here to overwrite
+      default content
+    -->
+        <h3 slot="header">{{ showModal }}</h3>
+      </img-modal>
+
+    <style>
+
+    </style>
+
+    <!-- Work Content / Image grid Start -->
+    <main class="work-container">
+      <div class="work-figure-row">
+        <figure class="work-figure work-figure-first ">
+          <img class="work-img" src="https://picsum.photos/700/400" alt="">
+        </figure>
+        <figure class="work-figure  ">
+          <img class="work-img" src="https://picsum.photos/550/640" alt="">
+        </figure>
+      </div>
+      <div class="work-figure-row">
+        <figure class="work-figure work-figure-first">
+          <img class="work-img" src="https://picsum.photos/350/400" alt="">
+        </figure>
+        <figure class="work-figure  ">
+          <img class="work-img" src="https://picsum.photos/450/740" alt="">
+        </figure>
+      </div>
+      <div class="work-figure-row">
+        <figure class="work-figure work-figure-first ">
+          <img class="work-img" src="https://picsum.photos/500/400" alt="">
+        </figure>
+        <figure class="work-figure ">
+          <img class="work-img" src="https://picsum.photos/450/840" alt="">
+        </figure>
+      </div>
+    </main>
+    <!-- Work Content / Image grid End  -->
+  </div>
 
 </template>
 
@@ -36,8 +54,10 @@
   export default {
 
     data() {
-      return {}
-    }
+      return {
+        showModal: false
+      }
+    },
 
 
   }
@@ -67,7 +87,6 @@
     @apply flex
     flex-col
     w-full
-
     md:flex-row
     md:mb-3
     }
@@ -78,20 +97,17 @@
     }
 
   .work-figure {
-    @apply
-      mb-3
-      md:mb-0
-  }
+    @apply mb-3
+    md:mb-0
+    }
 
 
   .work-figure-row {
 
-
     &:nth-child(odd) {
       .work-figure {
         &:nth-child(odd) {
-          @apply
-          md:w-3/4
+          @apply md:w-3/4
 
           }
 
