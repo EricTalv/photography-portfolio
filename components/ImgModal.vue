@@ -14,14 +14,14 @@
 
       <div class="img-controls">
         <div class="img-control-prev">
-          <button @click="console.log('PREV')">
+          <button @click="setOccurenceImage()">
             <svg class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
           </button>
         </div>
         <div class="img-control-next">
-          <button @click="console.log('NEXT')">
+          <button @click="setOccurenceImage(true)">
             <svg class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
@@ -39,7 +39,8 @@
 
           <div class="modal-body">
             <div class="flex justify-center" >
-              <img class="w-11/12" :src="currentImage" alt="">
+              <img class="w-11/12" :src="currentImage.src" alt="">
+              {{ images.findIndex((image) => image.src === currentImage.src ) }}
             </div>
 
             <slot name="body">
@@ -61,7 +62,54 @@
 <script>
   export default {
     name: "Modal.vue",
-    props: ['currentImage', 'images']
+    props: ['currentImage', 'images'],
+
+    methods: {
+      // I couldn't think of a better name
+      // SetOccurenceImage
+      // When NextImage is set true, it will go to the next
+      // image in the image array occurence
+      // If not, it will go to the previous one
+      setOccurenceImage(nextImage) {
+
+        // Get current Image Index
+        var currentImageIndex = this.images.findIndex((image) => image.src === this.currentImage.src)
+
+        const imageGalleryLength = this.images.length
+
+        var operator = "";
+
+        // Check if its Prev or Next image
+        if (nextImage) {
+          operator = "+";
+        } else {
+          operator = "-";
+        }
+
+        // If the index is 0 and the previous button
+        // is pressed, we set the index to gallery length
+        if (currentImageIndex === 0 && !nextImage ) {
+          currentImageIndex = imageGalleryLength
+        }
+
+        // Get Next Image Value
+        var nextImageValue = eval( currentImageIndex + operator  +  "1"  )
+
+        // If we are at the end of our gallery
+        // then start from 0
+        // if we are at 0 and go back, then
+        // add gallery length to go to start from the end
+        if (nextImageValue === imageGalleryLength) {
+           nextImageValue = nextImageValue - imageGalleryLength
+        }
+
+        // Send next image index in occurence
+        this.$emit('newCurrentModalImage', this.images[nextImageValue])
+
+
+      },
+
+    }
 
   }
 </script>

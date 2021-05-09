@@ -12,12 +12,12 @@
     <!--  After every 2 items create a ROW   -->
     <div class="work-figure-row" v-for="i in Math.ceil(images.length / 2)">
       <figure class="work-figure" v-for="image in images.slice((i - 1) * 2, i * 2)">
-        <img @click="setModalState(true, image.src)" class="work-img" :src="image.src" alt="">
+        <img @click="setModalState(true, image)" class="work-img" :src="image.src" alt="">
       </figure>
     </div>
 
 
-      <img-modal v-if="showModal" @close="setModalState(false)" :currentImage="currentModalImage" :images="images"  >
+      <img-modal v-if="showModal" @newCurrentModalImage="setNewCurrentModalImage($event)" @close="setModalState(false)" :currentImage="currentModalImage" :images="images"  >
 
       </img-modal>
 
@@ -69,19 +69,23 @@
             src: "https://picsum.photos/seed/picsum/200/300"
           },
           {
-            src: "https://picsum.photos/450/840"
+            src: "https://picsum.photos/670/840"
           },
           {
-            src: "https://picsum.photos/450/840"
+            src: "https://picsum.photos/250/840"
           },
           {
-            src: "https://picsum.photos/450/840"
+            src: "https://picsum.photos/1500/840"
           }
         ]
       }
     },
 
     methods: {
+
+      setNewCurrentModalImage(image) {
+        this.currentModalImage = image
+      },
 
       // Set Scroll To Disable when modal is open
       setModalState(state,imageSrc) {
