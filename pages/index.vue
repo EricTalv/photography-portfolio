@@ -1,54 +1,21 @@
 <template>
 
   <div>
-
-
-    <!--  Img Modal Test  -->
-
-
-    <button id="show-modal" @click="setModalState(true)">Show Modal</button>
-
-
-    <!--  After every 2 items create a ROW   -->
-    <div class="work-figure-row" v-for="i in Math.ceil(images.length / 2)">
-      <figure class="work-figure" v-for="image in images.slice((i - 1) * 2, i * 2)">
-        <img @click="setModalState(true, image)" class="work-img" :src="image.src" alt="">
-      </figure>
-    </div>
-
-
-      <img-modal v-if="showModal" @newCurrentModalImage="setNewCurrentModalImage($event)" @close="setModalState(false)" :currentImage="currentModalImage" :images="images"  >
-
-      </img-modal>
-
-    <style>
-
-    </style>
+    <!-- Show modal when conditions are set  -->
+    <img-modal v-if="showModal" @newCurrentModalImage="setNewCurrentModalImage($event)" @close="setModalState(false)" :currentImage="currentModalImage" :images="images"  >
+    </img-modal>
 
     <!-- Work Content / Image grid Start -->
     <main class="work-container">
-      <div class="work-figure-row">
-        <figure class="work-figure work-figure-first ">
-          <img class="work-img" src="https://picsum.photos/700/400" alt="">
-        </figure>
-        <figure class="work-figure  ">
-          <img class="work-img" src="https://picsum.photos/550/640" alt="">
-        </figure>
-      </div>
-      <div class="work-figure-row">
-        <figure class="work-figure work-figure-first">
-          <img class="work-img" src="https://picsum.photos/350/400" alt="">
-        </figure>
-        <figure class="work-figure  ">
-          <img class="work-img" src="https://picsum.photos/450/740" alt="">
-        </figure>
-      </div>
-      <div class="work-figure-row">
-        <figure class="work-figure work-figure-first ">
-          <img class="work-img" src="https://picsum.photos/500/400" alt="">
-        </figure>
-        <figure class="work-figure ">
-          <img class="work-img" src="https://picsum.photos/450/840" alt="">
+      <!--  After every 2 items create a ROW   -->
+      <div class="work-figure-row" v-for="i in Math.ceil(images.length / 2)">
+        <figure
+          class="work-figure"
+          v-for="(image, index) in images.slice((i - 1) * 2, i * 2)"
+
+          :class="i === Math.ceil(images.length / 2) && index % 2 === 0 && images.slice((i - 1) * 2, i * 2).length === 1  ? 'remove-margin-right' : ''  "
+        >
+          <img @click="setModalState(true, image)" class="work-img" :src="image.src" alt="">
         </figure>
       </div>
     </main>
@@ -76,7 +43,10 @@
           },
           {
             src: "https://picsum.photos/1500/840"
-          }
+          },
+          {
+            src: "https://picsum.photos/1500/840"
+          },
         ]
       }
     },
@@ -100,6 +70,24 @@
 
         }
       }
+    },
+
+    computed: {
+
+      // i === Math.ceil(images.length / 2) && index % 2 === 0 && images.slice((i - 1) * 2, i * 2).length === 1
+
+      setLastImageMargin(rowsIndex, images, indexOfImage) {
+        const getLastRow = rowsIndex === Math.ceil(images.length / 2)
+
+        const imagesLengthInRow = images.slice((i - 1) * 2, i * 2).length
+
+        const getFirstImageInRow = indexOfImage % 2 === 0
+
+        if (imagesLengthInRow === 1 && getFirstImageInRow && getLastRow) {
+          return true
+        }
+
+       }
     }
 
 
@@ -139,6 +127,10 @@
     @apply mb-3
     md:mb-0
     }
+
+  .remove-margin-right {
+    margin-right: 0 !important;
+  }
 
 
   .work-figure-row {

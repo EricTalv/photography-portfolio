@@ -40,7 +40,6 @@
           <div class="modal-body">
             <div class="flex justify-center" >
               <img class="w-11/12" :src="currentImage.src" alt="">
-              {{ images.findIndex((image) => image.src === currentImage.src ) }}
             </div>
 
             <slot name="body">
@@ -105,7 +104,6 @@
 
         // Send next image index in occurence
         this.$emit('newCurrentModalImage', this.images[nextImageValue])
-
 
       },
 
