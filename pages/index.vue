@@ -45,7 +45,7 @@
             src: "https://picsum.photos/1500/840"
           },
           {
-            src: "https://picsum.photos/1500/840"
+            src: "https://picsum.photos/1200/970"
           },
         ]
       }

@@ -14,14 +14,14 @@
 
       <div class="img-controls">
         <div class="img-control-prev">
-          <button @click="setOccurenceImage()">
+          <button @click="setOccurrenceImage()">
             <svg class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
           </button>
         </div>
         <div class="img-control-next">
-          <button @click="setOccurenceImage(true)">
+          <button @click="setOccurrenceImage(true)">
             <svg class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
@@ -69,7 +69,7 @@
       // When NextImage is set true, it will go to the next
       // image in the image array occurence
       // If not, it will go to the previous one
-      setOccurenceImage(nextImage) {
+      setOccurrenceImage(nextImage) {
 
         // Get current Image Index
         var currentImageIndex = this.images.findIndex((image) => image.src === this.currentImage.src)
