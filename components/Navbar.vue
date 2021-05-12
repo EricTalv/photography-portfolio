@@ -50,11 +50,11 @@
         flex-col
         justify-center
         items-center">
-        <a href="#"
+        <a href="/"
            class="block md:inline-block">Work</a>
-        <a href="#"
+        <a href="/about"
            class="block md:inline-block">About</a>
-        <a href="#"
+        <a href="/contact"
            class="block md:inline-block">Contact</a>
       </div>
 
