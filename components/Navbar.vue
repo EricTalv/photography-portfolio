@@ -96,14 +96,17 @@
 
       }
     },
-
-
   }
 </script>
 
 <style lang="scss">
 
+  nav {
+    padding: 1.8vw 4vw;
+  }
+
   .hamburger {
+    padding: 0;
     &:focus {
       outline: none;
     }
@@ -111,7 +114,8 @@
 
   .nav-logo {
     font-family: 'Ropa Sans', sans-serif;
-    font-size: 1.8rem;
+    @apply
+      text-3xl
   }
 
   .nav-links-mobile, .nav-links-desktop {
