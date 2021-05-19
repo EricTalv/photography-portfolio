@@ -1,11 +1,11 @@
 <template>
     <div class="flex flex-col  min-h-screen md:flex-row general-padding">
-      <figure class="about-figure">
+      <figure class="about-figure ">
         <img class="h-60 w-full md:h-full object-cover" src="https://picsum.photos/670/840" alt="">
       </figure>
       <main class="about-content flex-grow  flex flex-wrap flex-col  text-md xl:text-xl">
         <button @click="changeLanguage(currentLanguage)" class="about-lang-btn block-inline mt-3 md:mt-0">{{ paragraphs[currentLanguage].lang }}</button>
-        <div class="about-paragraphs w-96">
+        <div class="about-paragraphs ">
           <div v-html="paragraphs[currentLanguage].text"></div>
         </div>
       </main>
@@ -24,11 +24,11 @@
 
               {
                 lang: "est",
-                text: "<p>This is Estonian text! <b>Hi Peeter</b></p>",
+                text: "<p>Siin on Eesti! <b>Tere Peeter</b></p>",
               },
               {
                 lang: "rus",
-                text: "<p>This is Russian text! <b>Hi Valodja</b></p>",
+                text: "<p>Эта Русском! <b>Привет Валодя!</b></p>",
               },
               {
                 lang: "eng",
@@ -55,13 +55,16 @@
 @media (min-width: 768px) {
 
   .about-figure {
-    width: 150rem;
-    height: 30%;
+    width:  40%;
+
+    img {
+      height: 70%;
+    }
+
   }
 }
 
 .about-paragraphs {
-  width: 37rem;
 }
 
 .about-content {
