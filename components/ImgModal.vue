@@ -39,7 +39,7 @@
 
           <div class="modal-body">
             <div class="flex justify-center" >
-              <img class="w-11/12" :src="currentImage.src" alt="">
+              <img style="height: 85vh" :src="currentImage.src" alt="">
             </div>
 
             <slot name="body">
