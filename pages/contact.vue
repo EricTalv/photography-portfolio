@@ -37,15 +37,22 @@
 }
 
 .contact-data-wrapper {
+  @apply
+   w-screen
+   md:w-auto
+}
+
+.contact-data-wrapper {
   font-family: 'Source Code Pro', monospace;
   padding-left: 2vw;
-
-  display: flex;
-  flex-flow: column;
 
   h1, h3, a {
 
     @apply
+      flex
+      flex-col
+      items-center
+      md:items-start
       py-1
       text-lg
   }
@@ -53,6 +60,11 @@
   a {
     text-decoration: underline;
   }
+
+ @media(min-width: 640px) {
+   margin-top: -40vw;
+ }
+
 
 }
 
