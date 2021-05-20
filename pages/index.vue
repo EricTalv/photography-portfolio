@@ -83,6 +83,13 @@
   }
   */
 
+  .work-figure-row {
+    img {
+      -webkit-box-shadow: 0px 0px 62px -15px rgba(0,0,0,1);
+      -moz-box-shadow: 0px 0px 62px -15px rgba(0,0,0,1);
+    }
+  }
+
   .work-container {
 
     @apply flex

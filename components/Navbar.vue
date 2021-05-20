@@ -35,7 +35,6 @@
         h-screen
         absolute
         top-24
-        bg-white
         flex
         flex-col
         justify-center
@@ -105,7 +104,22 @@
     padding: 1.8vw 4vw;
   }
 
+  .nav-links-mobile {
+    background-color: #242424;
+  }
+
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner:after,
+  .hamburger.is-active .hamburger-inner:before{
+    background-color: white ;
+  }
+
   .hamburger {
+
+    .hamburger-inner, :after, :before, .is-active {
+      background-color: white;
+    }
+
     padding: 0;
     &:focus {
       outline: none;

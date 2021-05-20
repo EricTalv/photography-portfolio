@@ -120,7 +120,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(30, 30, 30, 0.9);
     display: table;
     transition: opacity 0.3s ease;
 
