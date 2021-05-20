@@ -9,7 +9,11 @@
 
       <div class="contact-data-wrapper ">
         <h1>Get in Touch!</h1>
-        <h3>uwuowo@gmail.com</h3>
+        <h3>luna.art01@gmail.com</h3>
+        <a href="">
+          <h3>@luella.photography</h3>
+        </a>
+
       </div>
 
     </main>
@@ -24,18 +28,40 @@
 <style lang="scss">
 
 .contact-content {
+  height: 75vh;
+
   @apply
-    h-screen
     flex
     flex-wrap
+    items-center
 }
 
 .contact-data-wrapper {
   font-family: 'Source Code Pro', monospace;
+  padding-left: 2vw;
+
+  display: flex;
+  flex-flow: column;
+
+  h1, h3, a {
+
+    @apply
+      py-1
+      text-lg
+  }
+
+  a {
+    text-decoration: underline;
+  }
 
 }
 
 .contact-img {
+  width: 50rem;
+
+  -webkit-box-shadow: 0px 0px 62px -15px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 62px -15px rgba(0,0,0,1);
+
   @apply
    object-cover
 }
