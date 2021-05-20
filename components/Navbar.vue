@@ -1,5 +1,5 @@
 <template>
-  <nav class="mb-10 flex flex-wrap items-center justify-between bg-white">
+  <nav class="flex flex-wrap items-center justify-between ">
 
     <!-- logo Start -->
     <div class="nav-logo">
@@ -150,7 +150,8 @@
   a.nuxt-link-exact-active {
     font-weight: 400;
 
-    border-bottom: 1px solid black;
+
+    border-bottom: 1px solid white;
     padding-bottom: 3px;
   }
 

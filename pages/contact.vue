@@ -1,13 +1,13 @@
 <template>
-    <main class="contact-content flex flex-wrap general-padding ">
+    <main class="contact-content ">
 
-      <div class="contact-img-strip">
-        <figure>
-          <img class="h-64 w-full object-cover md:h-screen md:w-auto" src="https://picsum.photos/670/840" alt="">
+      <div class="contact-img-wrapper">
+        <figure class="contact-img-figure">
+          <img class="contact-img " src="https://picsum.photos/670/400" alt="">
         </figure>
       </div>
 
-      <div class="contact-data h-screen pt-5 flex-grow flex flex-col items-center md:h-auto md:justify-center md:pt-0">
+      <div class="contact-data-wrapper ">
         <h1>Get in Touch!</h1>
         <h3>uwuowo@gmail.com</h3>
       </div>
@@ -23,8 +23,28 @@
 
 <style lang="scss">
 
-.contact-data {
+.contact-content {
+  @apply
+    h-screen
+    flex
+    flex-wrap
+}
+
+.contact-data-wrapper {
   font-family: 'Source Code Pro', monospace;
+
+}
+
+.contact-img {
+  @apply
+   object-cover
+}
+
+.contact-img-figure {
+
+}
+
+.contact-img-wrapper {
 }
 
 </style>
