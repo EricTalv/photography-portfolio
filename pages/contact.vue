@@ -28,6 +28,7 @@
 <style lang="scss">
 
 .contact-content {
+  margin-top: 5vh;
   height: 75vh;
 
   @apply
