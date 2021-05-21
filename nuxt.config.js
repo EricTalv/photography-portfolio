@@ -16,7 +16,19 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Let me help you bring your visions to life! Providing high fidelity photography and editing' },
+      { hid: 'twitter:title', name: "twitter:title", content:"Luella Photography"},
+
+      { hid: 'twitter:description', name: "twitter:description", content:"Let me help you bring your visions to life! Providing high fidelity photography and editing"},
+      { hid: 'twitter:url', name: "twitter:url", content:"https://luella.photography/"},
+      { hid: 'twitter:card', name: "twitter:card", content:"summary_large_image"},
+      { hid: 'twitter:image', name: "twitter:image", content:"-"},
+
+      { hid: 'og:type', name: "og:type", content:"website"},
+      { hid: 'og:title', name: "og:title", content:"Luella Photography"},
+      { hid: 'og:description', name: "og:description", content:"Let me help you bring your visions to life! Providing high fidelity photography and editing"},
+      { hid: 'og:url', name: "og:url", content:"https://luella.photography/"},
+      { hid: 'og:image', name: "og:image", content:"-"},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

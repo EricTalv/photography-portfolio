@@ -36,7 +36,7 @@
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           "name": "Luella Photography",
-          "image": "/image.jpg",
+          "image": "",
           "@id": "https://www.luella.photography",
           "url": "https://www.luella.photography",
           "address": {
