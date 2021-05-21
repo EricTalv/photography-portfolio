@@ -31,6 +31,22 @@
 
     data() {
       return {
+
+        structuredData: {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Luella Photography",
+          "image": "/image.jpg",
+          "@id": "https://www.luella.photography",
+          "url": "https://www.luella.photography",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tallinn",
+            "addressCountry": "EE"
+          } ,
+          "sameAs": "https://www.instagram.com/luella.photography/"
+        },
+
         showModal: false,
         currentModalImage: null,
         images: [
@@ -50,6 +66,13 @@
             src: "https://picsum.photos/1200/970"
           },
         ]
+      }
+    },
+
+    // JSON LD
+    head() {
+      return  {
+        script: [{type: 'application/ld+json', json: this.structuredData }]
       }
     },
 

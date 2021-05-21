@@ -7,7 +7,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'luella-photography',
+    title: 'Luella Photography',
+    titleTemplate: '%s | Luella Photography',
+
     htmlAttrs: {
       lang: 'en'
     },
