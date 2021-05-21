@@ -174,6 +174,11 @@
     justify-content: center;
     align-items: center;
 
+
+    button {
+      outline: none;
+    }
+
     .img-control-next, .img-control-prev {
       width: 50%;
     }
