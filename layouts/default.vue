@@ -10,7 +10,7 @@
         <h1>Luella Photography</h1>
       </div>
       <div class="footer-media">
-        <a href="#">
+        <a href="https://www.instagram.com/luella.photography/">
           <svg class="h-8 w-8 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
