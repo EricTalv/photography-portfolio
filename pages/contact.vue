@@ -10,7 +10,7 @@
       <div class="contact-data-wrapper ">
         <h1>Get in Touch!</h1>
         <h3>luna.art01@gmail.com</h3>
-        <a href="">
+        <a href="https://www.instagram.com/luella.photography/">
           <h3>@luella.photography</h3>
         </a>
 
