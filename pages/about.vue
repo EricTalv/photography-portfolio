@@ -70,6 +70,10 @@
 }
 
 .about-content {
+  button {
+    outline: none;
+  }
+
   font-family: 'Source Code Pro', monospace;
 
   padding-right: 10%;
