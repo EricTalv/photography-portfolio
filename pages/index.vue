@@ -97,6 +97,14 @@
     }
 
   .work-img {
+
+    transition: all .5s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .5;
+    }
+
     @apply w-full
     h-full
     max-h-96
@@ -114,6 +122,7 @@
 
 
   .work-figure {
+
     @apply mb-3
     md:mb-0
     }
