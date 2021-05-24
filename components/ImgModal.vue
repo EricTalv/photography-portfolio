@@ -39,7 +39,7 @@
 
           <div class="modal-body">
             <div class="flex justify-center" >
-              <img style="height: 85vh" :src="currentImage.src" alt="">
+              <img style="height: 85vh" class="modal-image" :src="currentImage.src" alt="">
             </div>
 
             <slot name="body">
@@ -113,6 +113,11 @@
 </script>
 
 <style lang="scss">
+
+  .modal-image {
+    object-fit: cover;
+  }
+
   .modal-mask {
     position: fixed;
     z-index: 9998;
