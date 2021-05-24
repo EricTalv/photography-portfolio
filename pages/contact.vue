@@ -7,7 +7,7 @@
         </figure>
       </div>
 
-      <div class="contact-data-wrapper ">
+      <div class="contact-data-wrapper">
         <h1>Get in Touch!</h1>
         <h3>luna.art01@gmail.com</h3>
         <a href="https://www.instagram.com/luella.photography/">
@@ -28,17 +28,19 @@
 <style lang="scss">
 
 .contact-content {
-  margin-top: 5vh;
-  height: 75vh;
-
+  height: 80vh;
+  margin-bottom: 10px;
   @apply
     flex
     flex-wrap
     items-center
+    justify-center
 }
 
 .contact-data-wrapper {
+
   @apply
+    py-16
    w-screen
    md:w-auto
 }
@@ -63,14 +65,12 @@
   }
 
  @media(min-width: 640px) {
-   margin-top: -40vw;
  }
 
 
 }
 
 .contact-img {
-  width: 50rem;
 
   -webkit-box-shadow: 0px 0px 62px -15px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 62px -15px rgba(0,0,0,1);

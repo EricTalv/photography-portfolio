@@ -13,7 +13,9 @@
           class="work-figure"
           v-for="(image, index) in images.slice((i - 1) * 2, i * 2)"
 
-          :class="i === Math.ceil(images.length / 2) && index % 2 === 0 && images.slice((i - 1) * 2, i * 2).length === 1  ? 'remove-margin-right' : ''  "
+          :class="i === Math.ceil(images.length / 2) &&
+           index % 2 === 0 &&
+           images.slice((i - 1) * 2, i * 2).length === 1  ? 'remove-margin-right' : ''  "
         >
           <img @click="setModalState(true, image)" class="work-img" :src="image.src" alt="">
         </figure>
@@ -51,7 +53,7 @@
         currentModalImage: null,
         images: [
           {
-            src: "https://picsum.photos/seed/picsum/200/300"
+            src: require("~/assets/images/sasha.jpg")
           },
           {
             src: "https://picsum.photos/670/840"
