@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col  min-h-screen md:flex-row general-padding">
       <figure class="about-figure ">
-        <img class="h-60 w-full md:h-full object-cover" src="https://picsum.photos/670/840" alt="">
+        <img class="h-60 w-full md:h-full object-cover" src="~/assets/images/about.jpeg" alt="">
       </figure>
       <main class="about-content flex-grow  flex flex-wrap flex-col  text-md xl:text-xl">
         <button @click="changeLanguage(currentLanguage)" class="about-lang-btn block-inline mt-3 md:mt-0">{{ paragraphs[currentLanguage].lang }}</button>

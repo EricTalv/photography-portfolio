@@ -1,13 +1,11 @@
 <template>
-    <main class="contact-content ">
+    <main class="contact-content flex flex-wrap min-h-screen pt-16">
 
-      <div class="contact-img-wrapper">
-        <figure class="contact-img-figure">
-          <img class="contact-img " src="https://picsum.photos/670/400" alt="">
-        </figure>
+      <div class="contact-img-wrapper w-auto h-96">
+          <img class="contact-img " src="~/assets/images/contact.jpeg" alt="">
       </div>
 
-      <div class="contact-data-wrapper">
+      <div class="contact-data-wrapper w-auto h-96">
         <h1>Get in Touch!</h1>
         <h3>luna.art01@gmail.com</h3>
         <a href="https://www.instagram.com/luella.photography/">
@@ -27,37 +25,27 @@
 
 <style lang="scss">
 
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .contact-content {
-  height: 80vh;
-  margin-bottom: 10px;
-  @apply
-    flex
-    flex-wrap
-    items-center
-    justify-center
 }
 
 .contact-data-wrapper {
 
-  @apply
-    py-16
-   w-screen
-   md:w-auto
+
 }
 
 .contact-data-wrapper {
   font-family: 'Source Code Pro', monospace;
-  padding-left: 2vw;
+
+  padding-left: 1.5rem;
 
   h1, h3, a {
-
-    @apply
-      flex
-      flex-col
-      items-center
-      md:items-start
-      py-1
-      text-lg
+    margin-bottom: 10px;
   }
 
   a {
@@ -72,6 +60,8 @@
 
 .contact-img {
 
+
+
   -webkit-box-shadow: 0px 0px 62px -15px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 62px -15px rgba(0,0,0,1);
 
@@ -84,6 +74,7 @@
 }
 
 .contact-img-wrapper {
+
 }
 
 </style>

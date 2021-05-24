@@ -53,19 +53,37 @@
         currentModalImage: null,
         images: [
           {
-            src: require("~/assets/images/sasha.jpg")
+            src: require("~/assets/images/work1.jpg")
           },
           {
-            src: "https://picsum.photos/670/840"
+            src: require("~/assets/images/work2.jpeg")
           },
           {
-            src: "https://picsum.photos/250/840"
+            src: require("~/assets/images/work3.jpeg")
           },
           {
-            src: "https://picsum.photos/1500/840"
+            src: require("~/assets/images/work4.jpeg")
+
           },
           {
-            src: "https://picsum.photos/1200/970"
+            src: require("~/assets/images/work5.jpeg")
+
+          },
+          {
+            src: require("~/assets/images/work6.jpeg")
+
+          },
+          {
+            src: require("~/assets/images/work7.jpeg")
+
+          },
+          {
+            src: require("~/assets/images/work8.jpeg")
+
+          },
+          {
+            src: require("~/assets/images/work9.jpeg")
+
           },
         ]
       }
