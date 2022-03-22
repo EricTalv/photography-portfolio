@@ -1,13 +1,13 @@
 <template>
     <main class="contact-content flex flex-wrap min-h-screen pt-16">
 
-      <div class="contact-img-wrapper w-auto h-96">
-        <figure class="w-full h-full">
-          <img class="contact-img " src="~/assets/images/contact.jpeg" alt="">
+      <div class="contact-img-wrapper w-auto h-48">
+        <figure class="w-full h-48">
+          <img class="contact-img w-screen " src="~/assets/images/contact.jpeg" alt="">
         </figure>
       </div>
 
-      <div class="contact-data-wrapper w-auto h-96">
+      <div class="contact-data-wrapper w-screen h-96 text-center md:text-left md:w-auto">
         <h1>Get in Touch!</h1>
         <h3>luna.art01@gmail.com</h3>
         <a href="https://www.instagram.com/luella.photography/">
@@ -56,7 +56,7 @@ img {
   }
 
   @apply
-    my-5
+
     md:my-0
 
 }
@@ -78,6 +78,13 @@ img {
 
 .contact-img-wrapper {
 
+}
+
+@media (min-width: 780px) {
+  .contact-img {
+    height: 50vw;
+    width: 40vw;
+  }
 }
 
 </style>
