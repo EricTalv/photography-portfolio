@@ -37,6 +37,10 @@ export default {
     ]
   },
 
+  generate: {
+    subFolders: false
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/scss/global.scss'
