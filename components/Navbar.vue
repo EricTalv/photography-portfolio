@@ -111,13 +111,13 @@
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner:after,
   .hamburger.is-active .hamburger-inner:before{
-    background-color: white ;
+    background-color: white !important;
   }
 
   .hamburger {
 
     .hamburger-inner, :after, :before, .is-active {
-      background-color: white;
+      background-color: white !important;
     }
 
     padding: 0;
