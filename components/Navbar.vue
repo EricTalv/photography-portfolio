@@ -3,7 +3,7 @@
 
     <!-- logo Start -->
     <div class="nav-logo">
-      <h1>Luella.</h1>
+      <h1>Luella</h1>
       <h1>Photography</h1>
     </div>
     <!-- logo End -->
