@@ -1,20 +1,16 @@
-# luella-photography
+## Description
 
-## Build Setup
+Build a static photography portfolio 
 
-```bash
-# install dependencies
-$ npm install
+## Project Status
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+I got the project to a point of near completion, though
+near the end of the project I decided that a custom static site 
+for a photography portfolio was somewhat unnecessary, since
+such a website would be occasionally updated and a static site 
+without a headless CMS is very cumbersome to update.
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+I still decided to work on the site, for my own curiosity.
 
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+The newer site I designed and made in wordpress and 
+can be seen [here](https://luella.photography)
