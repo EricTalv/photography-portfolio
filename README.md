@@ -4,7 +4,7 @@ Build a static photography portfolio
 
 ## Project Status
 
-I got the project to a point of near completion, though
+I got the project to a point of completion, though
 near the end of the project I decided that a custom static site 
 for a photography portfolio was somewhat unnecessary, since
 such a website would be occasionally updated and a static site 
